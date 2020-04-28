@@ -82,10 +82,10 @@ window.customElements.define('kp-tabs', class KpTabs extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          --tab-bg-color: #f2f2f2;
-          --tab-text-color: #333;
-          --tab-active-bg-color: #fff;
-          --tab-active-border-color: #333;
+          --tab-bg-colour: #f2f2f2;
+          --tab-text-colour: #333;
+          --tab-active-bg-colour: #fff;
+          --tab-active-border-colour: #f26161;
 
           display: block;
           contain: content;
@@ -107,15 +107,15 @@ window.customElements.define('kp-tabs', class KpTabs extends HTMLElement {
         #tabs ::slotted(*) {
           padding: 1rem;
           flex: 1;
-          color: var( --tab-text-color);
-          background: var(--tab-bg-color);
+          color: var( --tab-text-colour);
+          background: var(--tab-bg-colour);
           border: none;
           justify-content: center;
           cursor: pointer;
         }
         #tabs ::slotted([aria-selected="true"]) {
-          background: var(--tab-active-bg-color);
-          border-top: 2px solid var(--tab-active-border-color);
+          background: var(--tab-active-bg-colour);
+          border-top: 2px solid var(--tab-active-border-colour);
         }
         #tabs ::slotted(:focus) {
           z-index: 1;

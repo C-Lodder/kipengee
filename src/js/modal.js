@@ -62,6 +62,7 @@ window.customElements.define('kp-modal', class KpModal extends HTMLElement {
       <style>
         :host {
           --modal-bg-colour: #fff;
+          --modal-colour: #151515;
           --modal-backdrop: rgba(0, 0, 0, .7);
         }
         *, *::after, *::before{
@@ -74,6 +75,7 @@ window.customElements.define('kp-modal', class KpModal extends HTMLElement {
           z-index: 50;
           width: 100%;
           height: 100%;
+          color: var(--modal-colour);
           background-color: var(--modal-backdrop);
           opacity: 0;
           visibility: hidden;
